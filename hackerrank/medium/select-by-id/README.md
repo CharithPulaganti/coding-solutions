@@ -24,7 +24,7 @@ The **CITY** table is described as follows:
 **Language:** db2  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-07-21T03:06:57.440Z  
+**Submitted:** 2026-07-21T03:07:08.367Z  
 
 ```db2
 
@@ -34,8 +34,7 @@ The **CITY** table is described as follows:
     2. The AS keyword causes errors, so follow this convention: "Select t.Field From table1 t" instead of "select t.Field From table1 AS t"
     3. Type your code immediately after comment. Don't leave any blank line.
 */
-SELECT *
-FROM CITY 
+SELECT * FROM CITY 
 WHERE ID = 1661;
 
 ```
