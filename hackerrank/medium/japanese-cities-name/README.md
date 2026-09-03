@@ -1,4 +1,4 @@
-# Revising the Select Query I
+# Japanese Cities' Names
 
 ![Difficulty](https://img.shields.io/badge/Difficulty-Medium-yellow)
 
@@ -23,7 +23,7 @@ The **CITY** table is described as follows:
 **Language:** db2  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-03T06:13:11.636Z  
+**Submitted:** 2026-09-03T06:15:28.438Z  
 
 ```db2
 
@@ -33,9 +33,8 @@ The **CITY** table is described as follows:
     2. The AS keyword causes errors, so follow this convention: "Select t.Field From table1 t" instead of "select t.Field From table1 AS t"
     3. Type your code immediately after comment. Don't leave any blank line.
 */
-SELECT * From CITY
-WHERE COUNTRYCODE = 'USA'
-AND population> 100000;
+SELECT NAME From CITY
+WHERE COUNTRYCODE = 'JPN';
 
 ```
 
