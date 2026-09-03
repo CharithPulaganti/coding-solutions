@@ -1,4 +1,4 @@
-# Mutations
+# Find a string
 
 ![Difficulty](https://img.shields.io/badge/Difficulty-Medium-yellow)
 
@@ -60,11 +60,15 @@ Here, the range loops over $0$ to $4$. $5$ is excluded.
 **Language:** Python  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-03T06:02:06.491Z  
+**Submitted:** 2026-09-03T06:05:12.466Z  
 
 ```py
-def mutate_string(string, position, character):
-    return string[:position] + character + string[position + 1:]
+def count_substring(string, sub_string):
+    count = 0
+    for i in range(len(string) - len(sub_string) + 1):
+        if string[i:i + len(sub_string)] == sub_string:
+            count += 1
+    return count
 
 
 ```
