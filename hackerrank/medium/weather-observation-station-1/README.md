@@ -1,4 +1,4 @@
-# Japanese Cities' Names
+# Weather Observation Station 1
 
 ![Difficulty](https://img.shields.io/badge/Difficulty-Medium-yellow)
 
@@ -25,7 +25,7 @@ where **LAT\_N** is the northern latitude and **LONG\_W** is the western longitu
 **Language:** db2  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-03T06:15:34.280Z  
+**Submitted:** 2026-09-03T06:18:51.527Z  
 
 ```db2
 
@@ -35,8 +35,7 @@ where **LAT\_N** is the northern latitude and **LONG\_W** is the western longitu
     2. The AS keyword causes errors, so follow this convention: "Select t.Field From table1 t" instead of "select t.Field From table1 AS t"
     3. Type your code immediately after comment. Don't leave any blank line.
 */
-SELECT NAME From CITY
-WHERE COUNTRYCODE = 'JPN';
+SELECT CITY, STATE FROM STATION;
 
 ```
 
