@@ -6,6 +6,5 @@
     3. Type your code immediately after comment. Don't leave any blank line.
 */
 SELECT distinct city
-From station
-WHERE left(upper(city), 1) in ('A', 'E', 'I', 'O', 'U')
-AND right(upper(city), 1) in ('A', 'E', 'I', 'O', 'U');
+from station
+WHERE left(upper(city), 1) not in ('A', 'E', 'I', 'O', 'U');
