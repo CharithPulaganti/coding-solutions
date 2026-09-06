@@ -6,9 +6,6 @@
     3. Type your code immediately after comment. Don't leave any blank line.
 */
 SELECT distinct city
-from station
-WHERE city LIKE '%a'
-OR city LIKE '%e'
-OR city LIKE '%i'
-OR city LIKE '%o'
-OR city LIKE '%u';
+From station
+WHERE left(upper(city), 1) in ('A', 'E', 'I', 'O', 'U')
+AND right(upper(city), 1) in ('A', 'E', 'I', 'O', 'U');
