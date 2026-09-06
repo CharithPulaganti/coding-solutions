@@ -1,4 +1,4 @@
-# String Formatting
+# Alphabet Rangoli
 
 ![Difficulty](https://img.shields.io/badge/Difficulty-Medium-yellow)
 
@@ -83,24 +83,39 @@ $ 0 < size < 27 $
 **Language:** Python  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-06T13:04:55.117Z  
+**Submitted:** 2026-09-06T14:26:09.907Z  
 
 ```py
-def print_formatted(number):
-    width = len(bin(number)[2:])
+def print_rangoli(size):
+    import string
     
-    for i in range(1, number + 1):
-        decimal = str(i)
-        octal = oct(i)[2:]
-        hexadecimal = hex(i)[2:].upper()
-        binary = bin(i)[2:]
+    alphabet = "abcdefghijklmnopqrstuvwxyz"
+    width = 4 * size -3
+    
+    for i in range(size):
+        row = ""
         
-        print(
-            decimal.rjust(width),
-            octal.rjust(width),
-            hexadecimal.rjust(width),
-            binary.rjust(width)
-        )
+        for j in range(i + 1):
+            if j > 0:
+                row +="-"
+            row += alphabet[size -1 -j]
+        
+        for j in range(i -1, -1, -1):
+            row += "-"
+            row += alphabet[size - 1 -j]
+        print(row.center(width, "-"))
+    
+    for i in range(size - 2, -1, -1):
+        row = ""
+        
+        for j in range(i + 1):
+            if j > 0:
+                row += "-"
+            row += alphabet[size - 1 -j]
+        for j in range(i - 1, -1, -1):
+            row += "-"
+            row += alphabet[size -1 -j]
+        print(row.center(width, "-"))
 
 ```
 
